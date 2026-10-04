@@ -12,7 +12,7 @@ export const site = {
   contactText:
     'We are interested in technology, research, collaboration, and interesting problems.',
   links: {
-    email: 'mailto:t2txyzpp@t2t.xyz',
+    email: 'mailto:t2ttechnologiesplc@gmail.com',
     github: 'https://github.com/Koket-al',
     x: 'https://x.com/Koket5_3',
   },
@@ -31,7 +31,7 @@ export const site = {
     links: {
       github: 'https://github.com/Koket-al',
       x: 'https://x.com/Koket5_3',
-      email: 'mailto:t2txyzpp@t2t.xyz',
+      email: 'mailto:t2ttechnologiesplc@gmail.com',
       cv: '', // add a CV link/PDF here when available (the button auto-hides while empty)
     },
   },

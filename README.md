@@ -59,29 +59,36 @@ It automatically appears on the Projects page, gets its own detail page at
 Other editable data: `src/data/technologies.js` (tech areas + map), `src/data/lab.js`
 (lab entries), `src/data/site.js` (contact links, founder info).
 
-## Deploying to Vercel
+## Deploying to Netlify (free)
 
-The repo is deployed on **Vercel** and redeploys automatically on every push to `main`.
+The site is live at **https://t2ttech.netlify.app**.
 
-### First-time setup
+### Quickest: Netlify Drop (no git, no commands)
 
-1. Push this project to GitHub with the **repo root = this folder** (i.e. `package.json`
-   sits at the repository root, not inside a subfolder).
-2. Go to [vercel.com/new](https://vercel.com/new) → import the GitHub repo.
-3. Vercel auto-detects Vite — leave the framework preset as-is:
-   - Build command: `npm run build`
-   - Output directory: `dist`
-   - Install command: `npm ci`
-4. Click **Deploy**. That's it — no environment variables are required (the site is
-   fully static).
+1. Run `npm run build` — this produces the `dist/` folder.
+2. Go to **app.netlify.com/drop** and drag the **`dist`** folder onto the page.
+3. Site is live instantly with free HTTPS. Create a free Netlify account when
+   prompted to keep the site (claim it) and enable:
+   **Site settings → Change site name → `t2ttech`**
+4. To update the site later: run `npm run build` and drag the new `dist` folder
+   onto **Deploys** in the Netlify dashboard.
 
-### What `vercel.json` does
+### Alternative: connect Git (auto-deploy on push)
 
-- **SPA rewrites** — all routes fall back to `index.html`, so deep links like
-  `/projects/ghost` work on refresh (required for React Router).
-- **Security headers** — `Content-Security-Policy`, `X-Content-Type-Options`,
-  `X-Frame-Options`, `Referrer-Policy`, and `Permissions-Policy` on every response.
-- **Asset caching** — hashed files under `/assets/` are cached for one year.
+Push the project to GitHub (repo root = this folder), then in Netlify:
+**Add new site → Import an existing project → GitHub** — Netlify auto-detects
+Vite (build `npm run build`, publish `dist`) and redeploys on every push.
+
+### What `_redirects` and `_headers` do
+
+- **`public/_redirects`** — SPA rewrite (`/* → /index.html 200`) so deep links
+  like `/projects/ghost` work on refresh (required for React Router).
+- **`public/_headers`** — `Content-Security-Policy`, `X-Content-Type-Options`,
+  `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy` on every response,
+  plus one-year immutable caching for hashed files under `/assets/`.
+
+(`vercel.json` is kept in the repo for a possible future Vercel deploy; Netlify
+ignores it.)
 
 ## Project structure
 

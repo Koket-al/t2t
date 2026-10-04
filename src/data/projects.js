@@ -44,7 +44,7 @@ export const projects = [
       'Source code is available on GitHub — implementation details and architecture notes live in the repository.',
     technology: [
       'Blockchain',
-      'Bitcoin ecosystem',
+      'ethereum',
       'AI recognition',
       'Digital identity',
       'RWA',
@@ -57,7 +57,7 @@ export const projects = [
       'Digital identity',
       'Real-world assets (RWA)',
       'DePIN',
-      'X-2-Earn',
+      'Token',
       'Product authenticity',
     ],
     status: 'Completed',
@@ -66,8 +66,8 @@ export const projects = [
     demo: '',
     future: [
       'Validate the token model with a small-scale physical pilot',
-      'Design the AI verification pipeline for material recognition',
-      'Explore Bitcoin-adjacent layers for anchoring recycling events',
+      'design and implement a smart bin for automated recognition and verification',
+      'Integrate with existing recycling infrastructure and partners',
       'Define the digital identity structure for contributors',
     ],
   },
@@ -109,7 +109,7 @@ export const projects = [
     status: 'Completed',
     featured: false,
     github: 'https://github.com/koket-al/Ghost',
-    demo: '',
+    demo: 'https://ethghostvert.vercel.app/',
     future: [
       'Prototype the dissolution-condition contract patterns',
       'Define what the persistence layer should (and should not) store',

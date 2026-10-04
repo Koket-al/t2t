@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://t2ttech.netlify.app/sitemap.xml

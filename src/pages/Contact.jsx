@@ -30,7 +30,7 @@ function Contact() {
             </span>
             <h3>Email</h3>
             <p>The most reliable way to reach us.</p>
-            <a href={site.links.email}>t2txyzpp@t2t.xyz</a>
+            <a href={site.links.email}>t2ttechnologiesplc@gmail.com</a>
           </Reveal>
 
           <Reveal className="contact-card" delay={80}>
